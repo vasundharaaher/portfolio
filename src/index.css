@@ -1,0 +1,86 @@
+:root {
+  --color-primary: #60CDF6;
+  --color-turquoise: #22B1C3;
+  --color-happy-blue: #2B91BF;
+  --color-sky-blue: #79CED8;
+  --color-aqua: #54C1C5;
+  --color-mint: #4FBAAD;
+  --color-white: #FFFFFF;
+  --color-navy: #15324B;
+  --color-background: #F3FAFC;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--color-navy);
+  background: var(--color-background);
+  font-family: Arial, sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-navy);
+}
+
+a {
+  color: var(--color-navy);
+}
+
+.primary-button {
+  min-height: 48px;
+  padding: 12px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-navy);
+  background: var(--color-primary);
+  border: none;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.primary-button:hover {
+  background: var(--color-turquoise);
+  transform: translateY(-2px);
+}
+
+.primary-button:focus-visible {
+  outline: 3px solid var(--color-happy-blue);
+  outline-offset: 3px;
+}
+
+.highlight {
+  color: var(--color-navy);
+  border-bottom: 3px solid var(--color-turquoise);
+}
+
+.card {
+  padding: 24px;
+  background: var(--color-white);
+  border: 1px solid #D7EEF2;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(43, 145, 191, 0.12);
+}
