@@ -1,16 +1,82 @@
-# React + Vite
+# Vasundhara Aher - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive portfolio website for Vasundhara Aher, a Software Developer. The website presents her profile, professional experience, projects, and technical skills.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19
+- Vite
+- React Router
+- JavaScript
+- CSS
+- Lucide React and React Icons
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Professional introduction and resume summary
+- Work experience timeline
+- Project overview cards
+- Grouped technical skills with interactive selection
+- Responsive navigation and layout
+- React Router-based internal navigation
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js 18 or newer
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+Open the local URL printed by Vite in your browser.
+
+### Production Build
+
+```bash
+npm run build
+```
+
+The production-ready files are generated in the `dist` directory.
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+### Lint
+
+```bash
+npm run lint
+```
+
+## Project Structure
+
+```text
+src/
+├── assets/       # Shared assets and constants
+├── components/   # Reusable React UI components
+├── data/         # Resume-backed portfolio content
+├── pages/        # Route-level page components
+├── App.jsx       # Application routes and layout
+└── main.jsx      # React entry point
+```
+
+Portfolio content is kept in modules under `src/data/` so it can be updated without changing the page components.
+
+## Contact
+
+- [LinkedIn](https://www.linkedin.com/in/vasundhara-aher/)
+- [GitHub](https://github.com/vasundharaaher)
+- [Email](mailto:vasundharaaher55@gmail.com)
