@@ -1,0 +1,276 @@
+.home-page {
+  width: min(100% - 48px, 1160px);
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.hero {
+  min-height: min(680px, 76vh);
+  display: flex;
+  align-items: center;
+  position: relative;
+  isolation: isolate;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  right: 7%;
+  width: clamp(180px, 28vw, 360px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(34, 177, 195, 0.16),
+    rgba(96, 205, 246, 0.3)
+  );
+  filter: blur(2px);
+  transform: translateY(-50%);
+}
+
+.hero-content {
+  max-width: 780px;
+  padding: 48px 0;
+}
+
+.hero-eyebrow {
+  margin: 0 0 14px;
+  color: var(--color-navy);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(3.25rem, 8vw, 6.25rem);
+  letter-spacing: -0.065em;
+  line-height: 0.98;
+}
+
+.hero h2 {
+  margin: 16px 0 18px;
+  color: var(--color-navy);
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  line-height: 1.15;
+  text-decoration: underline;
+  text-decoration-color: var(--color-turquoise);
+  text-decoration-thickness: 4px;
+  text-underline-offset: 7px;
+}
+
+.hero-description {
+  max-width: 54ch;
+  margin: 0;
+  color: #435b70;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.75;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.experience-section,
+.projects-section,
+.skills-section {
+  margin-top: 56px;
+  scroll-margin-top: 28px;
+}
+
+.section-heading {
+  margin: 0 0 24px;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.experience-list {
+  display: grid;
+  gap: 18px;
+}
+
+.experience-card {
+  padding: 24px;
+}
+
+.experience-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.experience-card__header h3,
+.skill-group h3 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+}
+
+.experience-card__company,
+.experience-card__period {
+  margin: 0;
+  color: #435b70;
+  line-height: 1.5;
+}
+
+.experience-card__company {
+  font-weight: 700;
+}
+
+.experience-card__period {
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.experience-card__highlights {
+  display: grid;
+  gap: 8px;
+  margin: 20px 0 0;
+  padding-left: 20px;
+  color: #435b70;
+  line-height: 1.65;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.project-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+}
+
+.project-card__description {
+  margin: 0;
+  color: #435b70;
+  line-height: 1.6;
+}
+
+.project-card__highlights {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0;
+  padding-left: 20px;
+  color: #435b70;
+  line-height: 1.6;
+}
+
+.project-card__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: auto 0 0;
+  padding: 16px 0 0;
+  list-style: none;
+}
+
+.project-card__technologies li {
+  padding: 6px 10px;
+  color: var(--color-navy);
+  background: var(--color-background);
+  border: 1px solid #D7EEF2;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.skill-group {
+  padding: 24px;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  color: var(--color-navy);
+  background: var(--color-background);
+  border: 1px solid #D7EEF2;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.skill-tag:hover {
+  border-color: var(--color-turquoise);
+  transform: translateY(-2px);
+}
+
+.skill-tag--active {
+  background: var(--color-turquoise);
+  border-color: var(--color-turquoise);
+}
+
+.skill-tag:focus-visible {
+  outline: 3px solid var(--color-happy-blue);
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .home-page {
+    width: min(100% - 36px, 1160px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .skill-tag {
+      transition: none;
+    }
+  }
+
+  .hero {
+    min-height: 560px;
+  }
+
+  .hero::after {
+    top: 28%;
+    right: -5%;
+    width: 220px;
+  }
+
+  .hero-content {
+    padding: 56px 0;
+  }
+
+  .experience-card__header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .skill-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}
+
